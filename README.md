@@ -1,14 +1,14 @@
 # SE_320
 Operation Safe-Ride App
 
-Mattie - Emergency Panic
+Mattie - EmergencyPanic 
 
-Katie - Notification
+Katie - EmailNotification and TextNotification - both inherit from NotificationSystem (interface) 
 
-Amit - Public Safety User
+Amit - PublicSafetyUser
 
-Melissa - Chapman user
+Melissa - ChapmanUser
 
-Amanda - User mgmt
+Amanda - UserManagementSystem
 
-Dib - Location
+Dib - LocationService, Locator, LocatorOverlay, etc.
