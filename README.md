@@ -5,9 +5,9 @@ Mattie - EmergencyPanic
 
 Katie - EmailNotification and TextNotification - both inherit from NotificationSystem (interface) 
 
-Amit - PublicSafetyUser
+Amit - PublicSafetyUser - inherit from UserInteraction
 
-Melissa - ChapmanUser
+Melissa - ChapmanUser and UserInteraction. ChapmanUser inherits from UserInteraction
 
 Amanda - UserManagementSystem
 
