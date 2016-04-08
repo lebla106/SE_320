@@ -27,7 +27,7 @@ public class TextNotification implements NotificationSystem {
         message = newMessage;
     }
 
-    public void sendNotification()
+    public boolean sendNotification()
     {
         try
         {
@@ -36,12 +36,19 @@ public class TextNotification implements NotificationSystem {
         catch (Exception e)
         {
             Log.e("SendText", e.getMessage(), e);
+            return false;
         }
+        return true;
     }
 
     public void editNotification(String edittedMessage)
     {
         message = edittedMessage;
+    }
+
+    public String getMessage()
+    {
+        return message;
     }
 }
 

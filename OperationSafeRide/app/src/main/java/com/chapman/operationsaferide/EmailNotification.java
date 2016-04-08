@@ -24,7 +24,7 @@ public class EmailNotification extends Activity implements NotificationSystem {
         message = newMessage;
     }
 
-    public void sendNotification()
+    public boolean sendNotification()
     {
         try
         {
@@ -37,7 +37,9 @@ public class EmailNotification extends Activity implements NotificationSystem {
         catch(Exception e)
         {
             Log.e("SendMail", e.getMessage(), e);
+            return false;
         }
+        return true;
     }
 
     public void editNotification(String edittedMessage)

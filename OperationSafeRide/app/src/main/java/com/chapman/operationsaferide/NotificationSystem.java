@@ -7,7 +7,7 @@ public interface NotificationSystem {
 
     public void addNotification(String newMessage);
 
-    public void sendNotification();
+    public boolean sendNotification();
 
     public void editNotification(String edittedMessage);
 }
