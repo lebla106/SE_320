@@ -10,4 +10,6 @@ public interface NotificationSystem {
     public boolean sendNotification();
 
     public void editNotification(String edittedMessage);
+
+    public String getMessage();
 }

@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/EmailNotification.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+              <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#541#542#0" expanded="true" />
@@ -46,16 +46,18 @@
                 <element signature="e#668#669#0" expanded="true" />
                 <element signature="e#1226#1227#0" expanded="true" />
                 <element signature="e#1266#1267#0" expanded="true" />
+                <element signature="e#1304#1305#0" expanded="true" />
+                <element signature="e#1334#1335#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailNotificationTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EmailNotificationTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/EmailNotificationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.64285713">
+              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -65,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/TextNotification.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="37" />
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#618#619#0" expanded="true" />
@@ -85,17 +87,17 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/NotificationSystem.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+              <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextNotificationTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TextNotificationTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/TextNotificationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6122449">
-              <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -1694,15 +1696,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/EmailNotificationTest.java" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/JSSEProvider.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/GMailSender.java" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/NotificationSystem.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/TextNotification.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/EmailNotification.java" />
         <option value="$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/TextNotificationTest.java" />
+        <option value="$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/EmailNotificationTest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/NotificationSystem.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/EmailNotification.java" />
       </list>
     </option>
   </component>
@@ -2116,14 +2118,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/EmailNotificationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15306123">
@@ -2151,31 +2145,23 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/NotificationSystem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/EmailNotification.java">
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/TextNotificationTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#541#542#0" expanded="true" />
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#632#633#0" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#1226#1227#0" expanded="true" />
-            <element signature="e#1266#1267#0" expanded="true" />
-          </folding>
+          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/TextNotification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="37" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="37" />
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#618#619#0" expanded="true" />
@@ -2190,10 +2176,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/TextNotificationTest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/chapman/operationsaferide/EmailNotification.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6122449">
-          <caret line="40" column="64" selection-start-line="40" selection-start-column="64" selection-end-line="40" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#541#542#0" expanded="true" />
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#668#669#0" expanded="true" />
+            <element signature="e#1226#1227#0" expanded="true" />
+            <element signature="e#1266#1267#0" expanded="true" />
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/androidTest/java/com/chapman/operationsaferide/EmailNotificationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.64285713">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
           <folding />
         </state>
       </provider>

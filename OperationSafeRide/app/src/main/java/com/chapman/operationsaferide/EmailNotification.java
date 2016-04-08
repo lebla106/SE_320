@@ -47,7 +47,14 @@ public class EmailNotification extends Activity implements NotificationSystem {
         message = edittedMessage;
     }
 
-    /** Called when the activity is first created. */
+    public String getMessage()
+    {
+        return message;
+    }
+
+}
+
+/** Called when the activity is first created. */
 //    @Override
 //    public void onCreate(Bundle savedInstanceState)
 //    {
@@ -64,5 +71,3 @@ public class EmailNotification extends Activity implements NotificationSystem {
 //            }
 //        });
 //    }
-
-}
