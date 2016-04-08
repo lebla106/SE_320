@@ -33,7 +33,9 @@ public class EmailNotification extends Activity implements NotificationSystem {
                     message,
                     "operationsaferidechap@gmail.com",
                     userEmail);
-        } catch (Exception e) {
+        }
+        catch(Exception e)
+        {
             Log.e("SendMail", e.getMessage(), e);
         }
     }
@@ -41,11 +43,6 @@ public class EmailNotification extends Activity implements NotificationSystem {
     public void editNotification(String edittedMessage)
     {
         message = edittedMessage;
-    }
-
-    public boolean notificationResult()
-    {
-        return true;
     }
 
     /** Called when the activity is first created. */
