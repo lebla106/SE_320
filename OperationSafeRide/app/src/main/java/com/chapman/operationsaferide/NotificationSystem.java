@@ -5,11 +5,11 @@ package com.chapman.operationsaferide;
  */
 public interface NotificationSystem {
 
-    public void addNotification();
+    public void addNotification(String newMessage);
 
     public void sendNotification();
 
-    public void editNotification();
+    public void editNotification(String edittedMessage);
 
     public boolean notificationResult();
 }

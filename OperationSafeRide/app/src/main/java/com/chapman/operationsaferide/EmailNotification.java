@@ -12,30 +12,35 @@ import android.widget.Button;
 public class EmailNotification extends Activity implements NotificationSystem {
 
     private String userEmail;
+    private String message;
 
     public EmailNotification(String email)
     {
         userEmail = email;
     }
 
-    public void addNotification()
+    public void addNotification(String newMessage)
     {
-
+        message = newMessage;
     }
 
-    @Override
-    public void sendNotification() {
-
+    public void sendNotification()
+    {
+        try
+        {
+            GMailSender sender = new GMailSender("operationsaferidechap@gmail.com", "chapmanpsafe");
+            sender.sendMail("Operation Safe Ride",
+                    message,
+                    "operationsaferidechap@gmail.com",
+                    userEmail);
+        } catch (Exception e) {
+            Log.e("SendMail", e.getMessage(), e);
+        }
     }
 
-    public void sendNotification(String toEmail)
+    public void editNotification(String edittedMessage)
     {
-
-    }
-
-    public void editNotification()
-    {
-
+        message = edittedMessage;
     }
 
     public boolean notificationResult()
@@ -44,29 +49,21 @@ public class EmailNotification extends Activity implements NotificationSystem {
     }
 
     /** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+//    @Override
+//    public void onCreate(Bundle savedInstanceState)
+//    {
+//        super.onCreate(savedInstanceState);
 //        setContentView(R.layout.main);
 //
 //        final Button send = (Button) this.findViewById(R.id.send);
-//        send.setOnClickListener(new View.OnClickListener() {
-//
-//            public void onClick(View v) {
+//        send.setOnClickListener(new View.OnClickListener()
+//        {
+//            public void onClick(View v)
+//            {
 //                // TODO Auto-generated method stub
-//
-//                try {
-//                    GMailSender sender = new GMailSender("username@gmail.com", "password");
-//                    sender.sendMail("This is Subject",
-//                            "This is Body",
-//                            "user@gmail.com",
-//                            "user@yahoo.com");
-//                } catch (Exception e) {
-//                    Log.e("SendMail", e.getMessage(), e);
-//                }
-//
+//                sendNotification();
 //            }
 //        });
+//    }
 
-    }
 }
