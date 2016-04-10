@@ -1,68 +1,42 @@
-public class UserManagementSystemTest extends TestCase  {
-    User user;
-    UserManagementSystem userSys;
+package com.chapman.operationsaferide;
+
+import junit.framework.TestCase;
+
+/**
+ * Created by klamkin on 4/10/16.
+ */
+public class UserManagementSystemTest extends TestCase {
+
+    private ChapmanUser studentUser;
+    private PublicSafetyUser publicSafetyUser;
+    private UserManagementSystem userSys;
 
     protected void setUp()
     {
-        user = new User();
+        // create users
+        studentUser = new ChapmanUser();
+        publicSafetyUser = new PublicSafetyUser();
+
+        // create management system
         userSys = new UserManagementSystem();
     }
-    
-    public Boolean User addUserTest(User aUser)
+
+    public void testAddUser() throws Exception
     {
-        //adds aUser to the database
-        //if user is already in database check if null to be true
-        //if not, the function will return the user added
-        //will check if what is returned is the same as the user added
+        userSys.addUser(studentUser);
+        assertTrue((userSys.getStudentUserCount() == 1) && (userSys.getpSafeUserCount() == 0));
     }
 
-    public Boolean deleteUserTest(User aUser)
+    public void testUpdateUser() throws Exception
     {
-        //removes user from database
-        //if user is actually in the database then it will remove it
-        //will return the user added to the database
-        //will check if what is returned is the same as the user removed
+        userSys.updateUser(studentUser, publicSafetyUser);
+        assertTrue((userSys.getStudentUserCount() == 0) && (userSys.getpSafeUserCount() == 1));
     }
 
-    public Boolean getUserStateTest(User aUser)
+    public void testDeleteUser() throws Exception
     {
-        user.userState = "alive";
-        if (userSys.getUserState(user) == "alive")
-        {
-            return true;
-        }
-        return false;
+        userSys.deleteUser(studentUser);
+        assertTrue((userSys.getStudentUserCount() == 0) && (userSys.getpSafeUserCount() == 0));
     }
 
-    public void setUserStateTest(String state,User aUser)
-    {
-        String state = "alive";
-        userSys.setUserState(state, user);
-        if (user.userState == state)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public void setUserTypeTest(String type,User aUser)
-    {
-        String state = "alive";
-        userSys.setUserType(state, user);
-        if (user.userType == state)
-        {
-            return true;
-        }
-        return false;
-    }
-
-    public String getUserTypeTest(User aUser)
-    {
-        user.userType = "alive";
-        if (userSys.getUserType(user) == "alive")
-        {
-            return true;
-        }
-        return false;
-    }
 }

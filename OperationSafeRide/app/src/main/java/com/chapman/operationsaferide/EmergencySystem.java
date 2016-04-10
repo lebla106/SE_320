@@ -5,7 +5,7 @@ package com.chapman.operationsaferide;
  */
 public interface EmergencySystem {
 
-    public void emergencyNotification(String newMessage);
+    public void addEmergencyNotification(String newMessage);
 
     public boolean sendEmergency();
 

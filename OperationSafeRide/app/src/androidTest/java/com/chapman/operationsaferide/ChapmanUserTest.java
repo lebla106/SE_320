@@ -14,7 +14,8 @@ public class ChapmanUserTest extends TestCase {
     private ChapmanUser user;
 
 
-    protected void setUp() throws Exception {
+    protected void setUp() throws Exception
+    {
         super.setUp();
         ChapmanUser user = new ChapmanUser();
         testName = "testUser";
@@ -25,19 +26,22 @@ public class ChapmanUserTest extends TestCase {
     }
 
     //Tests the setName and getName method
-    public void testName() {
+    public void testName()
+    {
         user.setName(testName);
         assertEquals(user.getName(), "testUser");
     }
 
     //Tests the setID and getID method
-    public void testID() {
+    public void testID()
+    {
         user.setID(testID);
         assertEquals(user.getID(), 123);
     }
 
     //Tests setNumGuests and getNumGuests method
-    public void testNumGuests() {
+    public void testNumGuests()
+    {
         user.setNumGuests(testGuests);
         assertEquals(user.getNumGuests(), 3);
     }

@@ -18,14 +18,15 @@ public class EmergencyPanic implements EmergencySystem{
 
     public EmergencyPanic(String num)
     {
-        userNumber= "7608280121";  //this must be changed to public safety, but for now it is Madison's number for testing purposes.
+        /* num must be psafe number */
         userNumber = num;
+        message = "";
     }
 
-    public void emergencyNotification(String newMessage)
+    public void addEmergencyNotification(String newMessage)
     {
-        message = "Emergency button activated. Send Public Safety officer to:"; //this part needs added location of the user when button pushed.
-        message = newMessage;
+        message = "Emergency button activated. Send Public Safety officer to: "; //this part needs added location of the user when button pushed.
+        message += newMessage;
     }
 
     public boolean sendEmergency()
@@ -45,6 +46,11 @@ public class EmergencyPanic implements EmergencySystem{
     public String getMessage()
     {
         return message;
+    }
+
+    public void clearMessage()
+    {
+        message = "";
     }
 
 }

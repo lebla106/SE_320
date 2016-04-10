@@ -4,41 +4,54 @@ import java.sql.*;
  * Created by klamkin on 4/4/16.
  */
 public class UserManagementSystem {
-//doesnt follow class diagram exactly because it would not work how we want it to so
-    //necessary changes made
-    public User addUser(User aUser)
+
+    private String dbConnection;
+    private int studentUserCount;
+    private int pSafeUserCount;
+
+    public UserManagementSystem()
     {
-        //adds aUser to the database
-        //wil later return user but currently there is no user class
-        //will not add user if it already exists
-        //everything commented out to avoid errors
-        //we also dont have access to this database
+        dbConnection = "";
+        studentUserCount = 0;
+        pSafeUserCount = 0;
     }
 
-    public User deleteUser(User aUser)
+    public void addUser(User user)
     {
-        //deletes aUser from the database
-        //wil later return user but currently there is no user class
-        //everything commented out to avoid errors
+        //adds user to the database
+        // once db is set up this function will works
+
+        if (user.getType().equals("PublicSafety"))
+            pSafeUserCount++;
+        else if (user.getType().equals("ChapmanStudent"))
+            studentUserCount++;
     }
 
-    public String getUserState(User aUser)
+    public User deleteUser(User user)
     {
-        return user.userState;
+        //deletes user from the database
+        // once db is set up this function will work
+
+        if (user.getType().equals("PublicSafety"))
+            pSafeUserCount--;
+        else if (user.getType().equals("ChapmanStudent"))
+            studentUserCount--;
+        return null;
     }
 
-    public void setUserState(String state,User aUser)
+    public void updateUser(User oldUser, User newUser)
     {
-        aUser.userState = state;
+        deleteUser(oldUser);
+        addUser(newUser);
     }
 
-    public void setUserType(String type,User aUser)
+    public int getpSafeUserCount()
     {
-        aUser.userType = type;
+        return pSafeUserCount;
     }
 
-    public String getUserType(User aUser)
+    public int getStudentUserCount()
     {
-        retun aUser.userType;
+        return studentUserCount;
     }
 }
