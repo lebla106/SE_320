@@ -5,23 +5,23 @@ package com.chapman.operationsaferide;
  */
 public class ChapmanUser 
 {
-  private String name;
+  	private String name;
 	private int chapmanID;
-	private int numGuest;
-	private LocationService pickupLocation;
-	private Map dropoffLocation;
+	private int numGuests;
+	//private LocationService pickupLocation;
+	//private Map dropoffLocation;
 	
-  //*********************************************** Constructor ***************************************************
+	//*********************************************** Constructor ***************************************************
 	public ChapmanUser()
 	{
 	  name = "Unknown";
-	  chapmanID = "0";
+	  chapmanID = 0;
 	  numGuests = 0;
-	  pickup Location = new Location Service;
-	  dropoffLocation = new Map;
+	  //pickup Location = new LocationService();
+	  //dropoffLocation = new Map();
 	}
 	
-	 //****************************************** Getters and Setters *************************************************
+	//****************************************** Getters and Setters *************************************************
 	
 	//ChapmanID
 	public void setID(int id)
@@ -40,9 +40,20 @@ public class ChapmanUser
 	}
 	public String getName()
 	{
-		return getName;
+		return this.name;
 	}
 	
+	//Number of Guests
+	public void setNumGuests(int guests)
+	{
+		this.numGuests = guests;
+	}
+	public int getNumGuests()
+	{
+		return this.numGuests;
+	}
+	
+	/*
 	//Pickup Location
 	public void setPickupLocation(Map m)
 	{
@@ -62,13 +73,25 @@ public class ChapmanUser
 	{
 		return this.dropoffLocation;
 	}
+	*/
 	
-	 //*********************************************** Other Functions *************************************************
-  /*
-  Function that sends email to PSafe notifying them of ride request with associated location of requester as well as 
-  Chapman ID and name of user and the total number of guests
+	//*********************************************** Override toString ************************************************
+	public String toString() 
+	{
+		//Overriding toString method
+		return "Chapman User [Name = " + getName() + ", Chapman ID = " + getID() + ", "
+				+ "Number of Guests = " + getNumGuests() + "]";
+	}
+	
+	
+	//*********************************************** Other Functions *************************************************
+	/*
+	  Function that sends email to PSafe notifying them of ride request with associated location of requester as well as 
+	  Chapman ID and name of user and the total number of guests
+	*/
   
-  public boolean requestRide(Map pickupLocation, Map dropoffLocation, int numGuests, String name, int id)
+	/*
+	public boolean requestRide(Map pickupLocation, Map dropoffLocation, int numGuests, String name, int id)
 	{
 		
 	}
