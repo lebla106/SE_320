@@ -1,12 +1,12 @@
 package com.chapman.operationsaferide;
 
 /**
- * Created by klamkin on 4/4/16.
+ * Class representing any employee of Operation Safe Ride from Chapman University
  */
 public class PublicSafetyUser extends User {
 
     private String name;
-    private int chapmanID;
+    private int empID;
     private String state;
     private String type;
 
@@ -19,18 +19,18 @@ public class PublicSafetyUser extends User {
     {
         super(s, "PublicSafety");
         name = n;
-        chapmanID = id;
+        empID = id;
     }
 
-    //ChapmanID
+    //EmployeeID
     public void setID(int id)
     {
-        this.chapmanID = id;
+        this.empID = id;
     }
 
     public int getID()
     {
-        return this.chapmanID;
+        return this.empID;
     }
 
     //User Name
@@ -65,4 +65,6 @@ public class PublicSafetyUser extends User {
     {
         type = t;
     }
+
+
 }
