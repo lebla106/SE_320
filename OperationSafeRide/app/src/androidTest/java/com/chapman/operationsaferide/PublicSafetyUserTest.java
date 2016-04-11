@@ -10,13 +10,11 @@ public class PublicSafetyUserTest extends TestCase {
     private String testName;
     private int testID;
     private String testString;
-    private PSafeUser user;
+    private PublicSafetyUser user;
 
-
-    protected void setUp() throws Exception
+    protected void setUp()
     {
-        super.setUp();
-        PsafeUser user = new PsafeUser();
+        user = new PublicSafetyUser();
         testName = "Officer1";
         testID = 321;
     }

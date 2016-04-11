@@ -6,7 +6,7 @@ package com.chapman.operationsaferide;
 public class PublicSafetyUser extends User {
 
     private String name;
-    private int empID;
+    private int employeeID;
     private String state;
     private String type;
 
@@ -19,18 +19,18 @@ public class PublicSafetyUser extends User {
     {
         super(s, "PublicSafety");
         name = n;
-        empID = id;
+        employeeID = id;
     }
 
     //EmployeeID
     public void setID(int id)
     {
-        this.empID = id;
+        this.employeeID = id;
     }
 
     public int getID()
     {
-        return this.empID;
+        return this.employeeID;
     }
 
     //User Name
@@ -65,6 +65,4 @@ public class PublicSafetyUser extends User {
     {
         type = t;
     }
-
-
 }
