@@ -33,7 +33,8 @@ public class GMailSender extends javax.mail.Authenticator {
         Security.addProvider(new JSSEProvider());
     }
 
-    public GMailSender(String user, String password) {
+    public GMailSender(String user, String password)
+    {
         this.user = user;
         this.password = password;
 
@@ -51,12 +52,15 @@ public class GMailSender extends javax.mail.Authenticator {
         session = Session.getDefaultInstance(props, this);
     }
 
-    protected PasswordAuthentication getPasswordAuthentication() {
+    protected PasswordAuthentication getPasswordAuthentication()
+    {
         return new PasswordAuthentication(user, password);
     }
 
-    public synchronized void sendMail(String subject, String body, String sender, String recipients) throws Exception {
-        try{
+    public synchronized void sendMail(String subject, String body, String sender, String recipients) throws Exception
+    {
+        try
+        {
             MimeMessage message = new MimeMessage(session);
             DataHandler handler = new DataHandler(new ByteArrayDataSource(body.getBytes(), "text/plain"));
             message.setSender(new InternetAddress(sender));
@@ -67,7 +71,9 @@ public class GMailSender extends javax.mail.Authenticator {
             else
                 message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
             Transport.send(message);
-        }catch(Exception e){
+        }
+        catch(Exception e)
+        {
 
         }
     }
@@ -93,9 +99,11 @@ public class GMailSender extends javax.mail.Authenticator {
      * @author Alexander Y. Kleymenov
      * @version $Revision$
      */
-    public final class JSSEProvider extends Provider {
+    public final class JSSEProvider extends Provider
+    {
 
-        public JSSEProvider() {
+        public JSSEProvider()
+        {
             super("HarmonyJSSE", 1.0, "Harmony JSSE Provider");
             AccessController.doPrivileged(new java.security.PrivilegedAction<Void>() {
                 public Void run() {
@@ -112,41 +120,49 @@ public class GMailSender extends javax.mail.Authenticator {
         }
     }
 
-    public class ByteArrayDataSource implements DataSource {
+    public class ByteArrayDataSource implements DataSource
+    {
         private byte[] data;
         private String type;
 
-        public ByteArrayDataSource(byte[] data, String type) {
+        public ByteArrayDataSource(byte[] data, String type)
+        {
             super();
             this.data = data;
             this.type = type;
         }
 
-        public ByteArrayDataSource(byte[] data) {
+        public ByteArrayDataSource(byte[] data)
+        {
             super();
             this.data = data;
         }
 
-        public void setType(String type) {
+        public void setType(String type)
+        {
             this.type = type;
         }
 
-        public String getContentType() {
+        public String getContentType()
+        {
             if (type == null)
                 return "application/octet-stream";
             else
                 return type;
         }
 
-        public InputStream getInputStream() throws IOException {
+        public InputStream getInputStream() throws IOException
+        {
             return new ByteArrayInputStream(data);
         }
 
-        public String getName() {
+        public String getName()
+        {
             return "ByteArrayDataSource";
         }
 
-        public OutputStream getOutputStream() throws IOException {
+        public OutputStream getOutputStream() throws IOException
+        {
             throw new IOException("Not Supported");
         }
     }

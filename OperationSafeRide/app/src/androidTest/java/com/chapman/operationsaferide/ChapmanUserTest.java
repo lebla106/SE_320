@@ -17,7 +17,7 @@ public class ChapmanUserTest extends TestCase {
     protected void setUp() throws Exception
     {
         super.setUp();
-        ChapmanUser user = new ChapmanUser();
+        user = new ChapmanUser();
         testName = "testUser";
         testID = 123;
         testGuests = 3;
