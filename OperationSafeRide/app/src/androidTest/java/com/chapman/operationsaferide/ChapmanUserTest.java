@@ -21,8 +21,7 @@ public class ChapmanUserTest extends TestCase {
         testName = "testUser";
         testID = 123;
         testGuests = 3;
-        testString = "Chapman User [Name = testUser, Chapman ID = 123, "
-                + "Number of Guests = 3]";
+        testString = "Chapman User [Name = testUser, Chapman ID = 123, Number of Guests = 3]";
     }
 
     //Tests the setName and getName method
@@ -49,6 +48,6 @@ public class ChapmanUserTest extends TestCase {
     //Tests the toString method
     public void testToString()
     {
-        assertEquals(user.toString(), testString);
+        assertTrue(user.toString().equals(testString));
     }
 }

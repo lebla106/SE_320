@@ -35,7 +35,7 @@ public class UserManagementSystemTest extends TestCase {
 
     public void testDeleteUser() throws Exception
     {
-        userSys.deleteUser(studentUser);
+        userSys.deleteUser(publicSafetyUser);
         assertTrue((userSys.getStudentUserCount() == 0) && (userSys.getpSafeUserCount() == 0));
     }
 
