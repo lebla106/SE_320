@@ -11,6 +11,13 @@ import android.app.AlertDialog;
 /**
  * Created by klamkin on 4/4/16.
  */
+
+/**
+ * This class implements methods that intake a user phone number,
+ * and a message that will be sent to the public safety office.
+ * It also contains messages to send the message, and contains
+ * error handling if something goes wrong.
+ */
 public class EmergencyPanic implements EmergencySystem{
 
     private String userNumber;
