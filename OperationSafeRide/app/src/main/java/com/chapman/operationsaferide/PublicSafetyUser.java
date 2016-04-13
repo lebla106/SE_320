@@ -31,13 +31,12 @@ public class PublicSafetyUser extends User {
 
     public PublicSafetyUser()
     {
-        super("state1", "PublicSafety");
+        super("state1", "PublicSafety", "");
     }
 
     public PublicSafetyUser(String n, int id, String s)
     {
-        super(s, "PublicSafety");
-        name = n;
+        super(s, "PublicSafety", n);
         empID = id;
     }
 
