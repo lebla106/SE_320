@@ -162,6 +162,7 @@ public class ChapmanUser extends User
 	* @return void
 	*/
 	
+	//TODO 
 	//public void setPickupLocation(Map m)
 	//{
 	//	this.pickupLocation = m;
@@ -225,6 +226,7 @@ public class ChapmanUser extends User
 	*/
 
 	/*
+	TODO
 	public boolean requestRide(Map pickupLocation, Map dropoffLocation, int numGuests, String name, int id)
 	{
 
