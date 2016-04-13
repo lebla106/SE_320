@@ -9,18 +9,20 @@ public class User {
 
     private String state;
     private String type;
-   //private String name;
+    private String name;
     
     /**
      * Public constructor to create an instance of this class
      * @param s 
      * @param t
+     * @param n
      * 
      */
-    public User(String s, String t)
+    public User(String s, String t, String n)
     {
         state = s;
         type = t;
+        name = n;
     }
 
     /**
