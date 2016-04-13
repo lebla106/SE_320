@@ -3,6 +3,7 @@ package com.chapman.operationsaferide;
  /**
  * Created by Melissa LeBlanc on 4/5/16.
  * @author Melissa LeBlanc
+ * @version 1.0
  * 
  * This class inherits from the User class, which contains one 
  * string attribute called name. It contains the attributes: 
