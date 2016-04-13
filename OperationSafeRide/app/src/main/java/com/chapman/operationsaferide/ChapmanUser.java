@@ -229,4 +229,23 @@ public class ChapmanUser extends User
 
 	}
 	*/
+	
+	/**
+	 * After requesting ride, sends info to public safety via email notification
+	 * @return boolean
+	 */
+	/*
+	private boolean sendInfo()
+	{
+		String timeStamp = new SimpleDateFormat("HH:mm:ss MM/dd/yyyy").format(new Date());
+		String info = "New ride request from " + getName() + ". Chapman ID #: " + getID()
+				+ ". Number of guests: " + getNumGuests() + ".\nPickup Location: "
+			+ getPickupLocation() + "\nDropoff Location: " +	"."	+ getDropoffLocation() + "."
+			+ "\n" + timeStamp;
+		notify.addNotification(info);
+		return (notify.sendNotification());
+	}
+	*/
+	
+	
 }
