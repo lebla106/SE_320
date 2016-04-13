@@ -3,30 +3,54 @@ package com.chapman.operationsaferide;
 import junit.framework.TestCase;
 
 /**
- * Created by Amit on 4/10/2016.
+ * @author      Amit Ben-David <benda106@mail.chapman.edu>
+ * @version     1.0                 (current version number of program)
+ * @since       2016-04-9          (the version of the package this class was first added to)
+ *
+ * Class testing PublicSafetyUser
  */
+
 public class PublicSafetyUserTest extends TestCase {
 
+    /**
+     * The test user's name.
+     */
     private String testName;
-    private int testID;
-    private String testString;
-    private PublicSafetyUser user;
 
-    protected void setUp()
+    /**
+     * The test user's test ID number.
+     */
+    private int testID;
+
+    /**
+     * The test user.
+     */
+    private PSafeUser user;
+
+
+    /**
+     * Sets up a user to be tested
+     */
+    protected void setUp() throws Exception
     {
-        user = new PublicSafetyUser();
+        super.setUp();
+        PsafeUser user = new PsafeUser();
         testName = "Officer1";
         testID = 321;
     }
 
-    //Tests the setName and getName method
+    /**
+     * Tests the setName and getName method
+     */
     public void testName()
     {
         user.setName(testName);
         assertEquals(user.getName(), "Officer1");
     }
 
-    //Tests the setID and getID method
+    /**
+     * Tests the setID and getID method
+     */
     public void testID()
     {
         user.setID(testID);
