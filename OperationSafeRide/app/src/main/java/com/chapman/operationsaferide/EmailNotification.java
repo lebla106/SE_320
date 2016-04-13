@@ -11,7 +11,7 @@ import android.widget.Button;
  * Help from http://stackoverflow.com/questions/2020088/sending-email-in-android-using-javamail-api-without-using-the-default-built-in-a
  *
  * This class implements the NotificationSystem interface. It
- * will use the attributes userNumber and message to create
+ * will use the attributes userEmail and message to create
  * new messages and send them out as notifications in the form
  * of emails.
  */
