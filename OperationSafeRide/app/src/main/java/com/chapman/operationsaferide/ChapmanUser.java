@@ -32,9 +32,7 @@ public class ChapmanUser extends User
      */
 	public ChapmanUser()
 	{
-        super("state1", "ChapmanStudent");
-
-		name = "Unknown";
+        super("state1", "ChapmanStudent", "Unknown");
 		chapmanID = 0;
 		numGuests = 0;
 		//pickup Location = new LocationService();
@@ -52,9 +50,8 @@ public class ChapmanUser extends User
      */
     public ChapmanUser(String n, int id, int numG, String s)
     {
-        super(s, "ChapmanStudent");
+        super(s, "ChapmanStudent", n);
 
-        name = n;
         chapmanID = id;
         numGuests = numG;
         //pickup Location = new LocationService();
