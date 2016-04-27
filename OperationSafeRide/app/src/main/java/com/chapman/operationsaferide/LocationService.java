@@ -1,5 +1,9 @@
 package com.chapman.operationsaferide;
 
+import android.location.*;
+import android.content.*;
+import android.os.*;
+
 /**
  * @author Daniel Osterman
  * @version 1
@@ -35,7 +39,7 @@ public class LocationService {
         };
         try {
 
-            lm.requestLocationUpdates(lm.GPS_PROVIDER, 0, 0, gpsListener);
+            //lm.requestLocationUpdates(lm.GPS_PROVIDER, 0, 0, gpsListener);
         }catch(SecurityException e) {
            System.out.println("Error: Location Permission Unavailable");
         }
@@ -45,12 +49,12 @@ public class LocationService {
 
     public Location getLocation(){
         try {
-            here = lm.getLastKnownLocation(lm.GPS_PROVIDER);
+            //here = lm.getLastKnownLocation(lm.GPS_PROVIDER);
         }catch(SecurityException e) {
             System.out.println("Error: Can't obtain Location");
         }
 
         return here;
     }
-    
+
 }
