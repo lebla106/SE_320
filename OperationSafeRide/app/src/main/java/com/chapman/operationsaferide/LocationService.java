@@ -52,9 +52,5 @@ public class LocationService {
 
         return here;
     }
- 
- 
- 
-public class LocationService {
-
+    
 }
