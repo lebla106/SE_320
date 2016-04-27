@@ -25,7 +25,7 @@ public class PublicSafetyUserTest extends TestCase {
     /**
      * The test user.
      */
-    private PSafeUser user;
+    private PublicSafetyUser user;
 
 
     /**
@@ -34,7 +34,7 @@ public class PublicSafetyUserTest extends TestCase {
     protected void setUp() throws Exception
     {
         super.setUp();
-        PsafeUser user = new PsafeUser();
+        user = new PublicSafetyUser();
         testName = "Officer1";
         testID = 321;
     }
