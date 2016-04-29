@@ -53,12 +53,12 @@ public class EmailNotification extends Activity implements NotificationSystem {
      *                  then the message wasn't sent
      *
      */
-    public boolean sendNotification()
+    public boolean sendNotification(String subject)
     {
         try
         {
             GMailSender sender = new GMailSender("operationsaferidechap@gmail.com", "chapmanpsafe");
-            sender.sendMail("Operation Safe Ride Request",
+            sender.sendMail(subject,
                     message,
                     "operationsaferidechap@gmail.com",
                     userEmail);

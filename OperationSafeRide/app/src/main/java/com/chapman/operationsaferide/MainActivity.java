@@ -52,4 +52,28 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void makeRequest()
+    {
+//        // Make chapman user
+//        ChapmanUser student = new ChapmanUser(name, id, numberOfGuests, "waiting", location);
+//        String message = student.toString() + " is requesting a ride.";
+//
+//        // send request to psafe (email here should be to psafe)
+//        EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
+//        request.addNotification(message);
+//        request.sendNotification("Operation Safe Ride Request");
+    }
+
+    public void cancelRequest()
+    {
+//        // Make chapman user
+//        ChapmanUser student = new ChapmanUser(name, id, numberOfGuests, "canceling", location);
+//        String message = student.toString() + " is CANCELING their ride.";
+//
+//        // send cancel request to psafe (email here should be to psafe)
+//        EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
+//        request.addNotification(message);
+//        request.sendNotification("Operation Safe Ride CANCELATION");
+    }
 }

@@ -19,6 +19,7 @@ public class ChapmanUser extends User
 	private String name;
 	private int chapmanID;
 	private int numGuests;
+	private String location;
 	private String state;
 	private String type;
 
@@ -36,6 +37,7 @@ public class ChapmanUser extends User
         super("state1", "ChapmanStudent", "Unknown");
 		chapmanID = 0;
 		numGuests = 0;
+        location = "";
 		//pickup Location = new LocationService();
 		//dropoffLocation = new Map();
 	}
@@ -49,12 +51,13 @@ public class ChapmanUser extends User
 	 * @param s A string representing state
      *
      */
-    public ChapmanUser(String n, int id, int numG, String s)
+    public ChapmanUser(String n, int id, int numG, String s, String l)
     {
         super(s, "ChapmanStudent", n);
 
         chapmanID = id;
         numGuests = numG;
+        location = l;
         //pickup Location = new LocationService();
         //dropoffLocation = new Map();
     }
@@ -207,7 +210,7 @@ public class ChapmanUser extends User
 	{
 		//Overriding toString method
 		return "Chapman User [Name = " + getName() + ", Chapman ID = " + getID() + ", "
-			+ "Number of Guests = " + getNumGuests() + "]";
+			+ "Number of Guests = " + getNumGuests() + ", at Location: " + location + "]";
 	}
 
 

@@ -56,7 +56,7 @@ public class TextNotification implements NotificationSystem {
      *                  then the message wasn't sent
      *
      */
-    public boolean sendNotification()
+    public boolean sendNotification(String subject)
     {
         try
         {

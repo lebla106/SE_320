@@ -13,7 +13,7 @@ public interface NotificationSystem {
 
     public void addNotification(String newMessage);
 
-    public boolean sendNotification();
+    public boolean sendNotification(String subject);
 
     public void editNotification(String edittedMessage);
 
