@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void makeRequest()
+    public void makeRequest(View view)
     {
 //        // Make chapman user
 //        ChapmanUser student = new ChapmanUser(name, id, numberOfGuests, "waiting", location);
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 //        request.sendNotification("Operation Safe Ride Request");
     }
 
-    public void cancelRequest()
+    public void cancelRequest(View view)
     {
 //        // Make chapman user
 //        ChapmanUser student = new ChapmanUser(name, id, numberOfGuests, "canceling", location);
