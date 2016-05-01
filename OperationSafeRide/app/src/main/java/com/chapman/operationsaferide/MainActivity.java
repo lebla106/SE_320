@@ -8,6 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,14 +22,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//            }
+//        });
     }
 
     @Override
@@ -53,27 +57,59 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void makeRequest(View view)
+    public void makeRequest()
     {
-//        // Make chapman user
-//        ChapmanUser student = new ChapmanUser(name, id, numberOfGuests, "waiting", location);
-//        String message = student.toString() + " is requesting a ride.";
-//
-//        // send request to psafe (email here should be to psafe)
-//        EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
-//        request.addNotification(message);
-//        request.sendNotification("Operation Safe Ride Request");
+        String name = ((EditText) findViewById(R.id.name_text)).getText().toString();
+        String id = ((EditText) findViewById(R.id.id_text)).getText().toString();
+        String numGuests = ((EditText) findViewById(R.id.guests_text)).getText().toString();
+        String location = ((EditText) findViewById(R.id.location_text)).getText().toString();
+
+        int i_id, i_numGuests = 0;
+        try
+        {
+            i_id = Integer.parseInt(id);
+            i_numGuests = Integer.parseInt(numGuests);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error converting to int.");
+            return;
+        }
+        // Make chapman user
+        ChapmanUser student = new ChapmanUser(name, i_id, i_numGuests, "waiting", location);
+        String message = student.toString() + " is requesting a ride.";
+
+        // send request to psafe (email here should be to psafe)
+        EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
+        request.addNotification(message);
+        request.sendNotification("Operation Safe Ride Request");
     }
 
-    public void cancelRequest(View view)
+    public void cancelRequest()
     {
-//        // Make chapman user
-//        ChapmanUser student = new ChapmanUser(name, id, numberOfGuests, "canceling", location);
-//        String message = student.toString() + " is CANCELING their ride.";
-//
-//        // send cancel request to psafe (email here should be to psafe)
-//        EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
-//        request.addNotification(message);
-//        request.sendNotification("Operation Safe Ride CANCELATION");
+        String name = ((EditText) findViewById(R.id.name_text)).getText().toString();
+        String id = ((EditText) findViewById(R.id.id_text)).getText().toString();
+        String numGuests = ((EditText) findViewById(R.id.guests_text)).getText().toString();
+        String location = ((EditText) findViewById(R.id.location_text)).getText().toString();
+
+        int i_id, i_numGuests = 0;
+        try
+        {
+            i_id = Integer.parseInt(id);
+            i_numGuests = Integer.parseInt(numGuests);
+        }
+        catch (Exception e)
+        {
+            System.out.println("Error converting to int.");
+            return;
+        }
+        // Make chapman user
+        ChapmanUser student = new ChapmanUser(name, i_id, i_numGuests, "canceling", location);
+        String message = student.toString() + " is CANCELING their ride.";
+
+        // send cancel request to psafe (email here should be to psafe)
+        EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
+        request.addNotification(message);
+        request.sendNotification("Operation Safe Ride CANCELATION");
     }
 }

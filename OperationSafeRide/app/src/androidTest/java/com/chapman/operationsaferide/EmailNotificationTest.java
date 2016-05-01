@@ -29,7 +29,7 @@ public class EmailNotificationTest extends TestCase {
     // test method to send notifications
     public void testSendNotification()
     {
-        boolean sent = emailSender.sendNotification();
+        boolean sent = emailSender.sendNotification("test subject");
         assertTrue(sent);
     }
 
