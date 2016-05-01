@@ -13,6 +13,14 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+/**
+ *
+ * Created by Melissa LeBlanc on 5/1/16
+ * Class that handles main activity of app.
+ * @author Melissa LeBlanc
+ * @version 1.0
+ * @see {@link AppCompatActivity}.
+ */
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -32,6 +40,11 @@ public class MainActivity extends AppCompatActivity {
 //        });
     }
 
+    /**
+     * Creates the options on menu.
+     * @param menu A variable of type {@link Menu}.
+     * @return A boolean variable if successful.
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu)
     {
@@ -40,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
+    /**
+     * Handles the item selected.
+     * @param item A variable of type {@link MenuItem}.
+     * @return A boolean variable if successful.
+     */
     @Override
     public boolean onOptionsItemSelected(MenuItem item)
     {
@@ -57,7 +75,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void makeRequest()
+    /**
+     * Makes a ride request.
+     * @return A boolean variable if successful.
+     */
+    public boolean makeRequest()
     {
         String name = ((EditText) findViewById(R.id.name_text)).getText().toString();
         String id = ((EditText) findViewById(R.id.id_text)).getText().toString();
@@ -73,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e)
         {
             System.out.println("Error converting to int.");
-            return;
+            return false;
         }
         // Make chapman user
         ChapmanUser student = new ChapmanUser(name, i_id, i_numGuests, "waiting", location);
@@ -83,9 +105,14 @@ public class MainActivity extends AppCompatActivity {
         EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
         request.addNotification(message);
         request.sendNotification("Operation Safe Ride Request");
+        return true;
     }
 
-    public void cancelRequest()
+    /**
+     * Cancels ride request.
+     * @return A boolean variable if successful.
+     */
+    public boolean cancelRequest()
     {
         String name = ((EditText) findViewById(R.id.name_text)).getText().toString();
         String id = ((EditText) findViewById(R.id.id_text)).getText().toString();
@@ -101,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
         catch (Exception e)
         {
             System.out.println("Error converting to int.");
-            return;
+            return false;
         }
         // Make chapman user
         ChapmanUser student = new ChapmanUser(name, i_id, i_numGuests, "canceling", location);
@@ -111,5 +138,6 @@ public class MainActivity extends AppCompatActivity {
         EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
         request.addNotification(message);
         request.sendNotification("Operation Safe Ride CANCELATION");
+        return true;
     }
 }
