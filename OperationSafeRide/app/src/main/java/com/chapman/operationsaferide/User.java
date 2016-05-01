@@ -2,7 +2,8 @@ package com.chapman.operationsaferide;
 
 /**
  * Created by klamkin on 4/10/16.
- * Edited by Melissa LeBlanc on 4/12/16
+ * Edited by Melissa LeBlanc on 4/12/16.
+ * @author Katie Lamkin & Melissa LeBlanc
  * Class that is in herited by PublicSafetyUser and ChapmanUser.
  */
 public class User {
@@ -13,9 +14,9 @@ public class User {
     
     /**
      * Public constructor to create an instance of this class
-     * @param s 
-     * @param t
-     * @param n
+     * @param s A variable of type String.
+     * @param t A variable of type String.
+     * @param n A variable of type String.
      * 
      */
     public User(String s, String t, String n)
@@ -27,7 +28,7 @@ public class User {
 
     /**
 	* Gets user type
-	* @return String
+	* @return A variable of type String.
 	*/
     public String getType()
     {
@@ -36,7 +37,7 @@ public class User {
 
     /**
 	* Gets user state
-	* @return String
+	* @return A variable of type String.
 	*/
     public String getState()
     {

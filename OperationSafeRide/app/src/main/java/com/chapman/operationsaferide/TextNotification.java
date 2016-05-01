@@ -11,6 +11,7 @@ import android.app.AlertDialog;
 /**
  * Created by klamkin on 4/4/16.
  * @author klamkin
+ * @see {@link NotificationSystem}.
  * Help from http://www.techrepublic.com/blog/software-engineer/how-to-send-a-text-message-from-within-your-android-app/
  *
  * This class implements the NotificationSystem interface. It

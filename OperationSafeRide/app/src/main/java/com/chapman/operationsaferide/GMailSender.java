@@ -20,6 +20,8 @@ import java.security.Provider;
 
 /**
  * Created by klamkin on 4/8/16.
+ * @author klamkin.
+ * @see {@link javax.mail.Authenticator}
  * Help from http://stackoverflow.com/questions/2020088/sending-email-in-android-using-javamail-api-without-using-the-default-built-in-a
  */
 public class GMailSender extends javax.mail.Authenticator {
@@ -33,6 +35,11 @@ public class GMailSender extends javax.mail.Authenticator {
         Security.addProvider(new JSSEProvider());
     }
 
+    /**
+     * Creates the gmail sender with the userName and password.
+     * @param user A variable of type String.
+     * @param password A variable of type String.
+     */
     public GMailSender(String user, String password)
     {
         this.user = user;
@@ -52,11 +59,23 @@ public class GMailSender extends javax.mail.Authenticator {
         session = Session.getDefaultInstance(props, this);
     }
 
+    /**
+     * Authenticates password.
+     * @return A variable of type {@link java.net.PasswordAuthentication}
+     */
     protected PasswordAuthentication getPasswordAuthentication()
     {
         return new PasswordAuthentication(user, password);
     }
 
+    /**
+     * Sends email.
+     * @param subject A variable of type String.
+     * @param body A variable of type String.
+     * @param sender A variable of type String.
+     * @param recipients A variable of type String.
+     * @throws Exception
+     */
     public synchronized void sendMail(String subject, String body, String sender, String recipients) throws Exception
     {
         try

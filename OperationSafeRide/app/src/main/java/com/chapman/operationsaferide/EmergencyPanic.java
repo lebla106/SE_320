@@ -10,6 +10,8 @@ import android.app.AlertDialog;
 
 /**
  * Created by klamkin on 4/4/16.
+ * @author klamkin
+ * @see {@link EmergencySystem}.
  */
 
 /**
@@ -23,6 +25,10 @@ public class EmergencyPanic implements EmergencySystem{
     private String userNumber;
     private String message;
 
+    /**
+     * Constructor.
+     * @param num A variable of type String.
+     */
     public EmergencyPanic(String num)
     {
         /* num must be psafe number */
@@ -30,12 +36,20 @@ public class EmergencyPanic implements EmergencySystem{
         message = "";
     }
 
+    /**
+     * Adds Emergency Notification.
+     * @param newMessage A variable of type String.
+     */
     public void addEmergencyNotification(String newMessage)
     {
         message = "Emergency button activated. Send Public Safety officer to: "; //this part needs added location of the user when button pushed.
         message += newMessage;
     }
 
+    /**
+     * Sends emergency request.
+     * @return A boolean variable if successful.
+     */
     public boolean sendEmergency()
     {
         try
@@ -50,11 +64,18 @@ public class EmergencyPanic implements EmergencySystem{
         return true;
     }
 
+    /**
+     * Gets message.
+     * @return A variable of type String.
+     */
     public String getMessage()
     {
         return message;
     }
 
+    /**
+     * Clears message.
+     */
     public void clearMessage()
     {
         message = "";

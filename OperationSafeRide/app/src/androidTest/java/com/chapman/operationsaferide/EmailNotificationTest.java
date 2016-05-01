@@ -4,6 +4,8 @@ import junit.framework.TestCase;
 
 /**
  * Created by klamkin on 4/8/16.
+ * @author klamkin
+ * @see junit.framework.TestCase
  */
 public class EmailNotificationTest extends TestCase {
 
@@ -11,7 +13,10 @@ public class EmailNotificationTest extends TestCase {
     private String testMessage;
     private EmailNotification emailSender;
 
-    // assigning the values
+    /**
+     * Assigning the values
+     */
+
     protected void setUp()
     {
         testUserEmail = "kmlamkin@gmail.com";
@@ -19,7 +24,10 @@ public class EmailNotificationTest extends TestCase {
         emailSender = new EmailNotification(testUserEmail);
     }
 
-    // test method to add notifications
+    /**
+     * test method to add notifications
+     */
+
     public void testAddNotification()
     {
         emailSender.addNotification(testMessage);

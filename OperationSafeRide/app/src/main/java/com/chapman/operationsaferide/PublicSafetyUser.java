@@ -4,6 +4,7 @@ package com.chapman.operationsaferide;
  * @author      Amit Ben-David <benda106@mail.chapman.edu>
  * @version     1.0                 (current version number of program)
  * @since       2016-04-9          (the version of the package this class was first added to)
+ * @see {@link User}.
  *
  * Class representing any employee of Operation Safe Ride from Chapman University
  */
@@ -29,11 +30,18 @@ public class PublicSafetyUser extends User {
      */
     private String type;
 
+
     public PublicSafetyUser()
     {
         super("state1", "PublicSafety", "");
     }
 
+    /**
+     * Overloaded constructor
+     * @param n A variable of type String.
+     * @param id A variable of type int.
+     * @param s A variable of type String.
+     */
     public PublicSafetyUser(String n, int id, String s)
     {
         super(s, "PublicSafety", n);
@@ -113,6 +121,4 @@ public class PublicSafetyUser extends User {
     {
         type = t;
     }
-
-
 }

@@ -4,7 +4,7 @@ package com.chapman.operationsaferide;
  * Created by Melissa LeBlanc on 4/5/16.
  * @author Melissa LeBlanc
  * @version 1.0
- * 
+ * @see {@link User}.
  * This class inherits from the User class, which contains one 
  * string attribute called name. It contains the attributes: 
  * chapmanID, numGuests, state, type,pickupLocation, and dropoffLocation. It represents the user 
@@ -66,7 +66,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Sets chapmanID
-	* @param id
+	* @param id A variable of type int.
 	* @return void
 	*/
 	public void setID(int id)
@@ -76,7 +76,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Gets chapmanID
-	* @return int
+	* @return A variable of type int.
 	*/
 	public int getID()
 	{
@@ -85,7 +85,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Sets user Name
-	* @param userName
+	* @param userName A variable of type String.
 	* @return void
 	*/
 	public void setName(String userName)
@@ -95,7 +95,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Gets user Name
-	* @return String
+	* @return A variable of type String
 	*/
 	public String getName()
 	{
@@ -104,7 +104,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Sets number of guests
-	* @param guests
+	* @param guests A variable of type int.
 	* @return void
 	*/
 	public void setNumGuests(int guests)
@@ -114,7 +114,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Gets number of guests
-	* @return int
+	* @return A variable of type int.
 	*/
 	public int getNumGuests()
 	{
@@ -123,7 +123,7 @@ public class ChapmanUser extends User
 
    /**
 	* Gets user state
-	* @return String
+	* @return A variable of type String.
 	*/
     public String getUserState()
     {
@@ -132,7 +132,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Sets user state
-	* @param s
+	* @param s A variable of type String.
 	* @return void
 	*/
     public void setUserState(String s)
@@ -142,7 +142,7 @@ public class ChapmanUser extends User
 
 	/**
 	* Gets user type
-	* @return String
+	* @return A variable of type String.
 	*/
     public String getUserType()
     {
@@ -151,7 +151,7 @@ public class ChapmanUser extends User
 	
 	/**
 	* Sets user type
-	* @param t
+	* @param t A variable of type String.
 	* @return void
 	*/
     public void setUserType(String t)
@@ -204,7 +204,7 @@ public class ChapmanUser extends User
 	
 	/**
 	* Override toString
-	* @return String
+	* @return A variable of type String.
 	*/
 	public String toString()
 	{
@@ -252,6 +252,4 @@ public class ChapmanUser extends User
 		return (notify.sendNotification());
 	}
 	*/
-	
-	
 }

@@ -10,7 +10,7 @@ public class UserManagementSystem {
     private int pSafeUserCount;
 
     /**
-     * instantiates the member variables
+     * Instantiates the member variables
      */
     public UserManagementSystem()
     {
@@ -21,8 +21,8 @@ public class UserManagementSystem {
 
     /**
      * Adds the user parameter to the database and returns that user
-     * @param user
-     * @return user
+     * @param user A variable of type {@link User}.
+     * @return user A variable of type {@link User}.
      */
     public User  addUser(User user)
     {
@@ -38,8 +38,8 @@ public class UserManagementSystem {
 
     /**
      * Deletes the user from the database and returns that user
-     * @param user
-     * @return user
+     * @param user A variable of type {@link User}.
+     * @return user A variable of type {@link User}.
      */
     public User deleteUser(User user)
     {
@@ -55,8 +55,8 @@ public class UserManagementSystem {
 
     /**
      * Takes in a user to update(old user) and a new user to replace it with (new user)
-     * @param oldUser
-     * @param newUser
+     * @param oldUser A variable of type {@link User}.
+     * @param newUser A variable of type {@link User}.
      */
     public void updateUser(User oldUser, User newUser)
     {
@@ -66,7 +66,7 @@ public class UserManagementSystem {
 
     /**
      * Returns the number of public safety users in the database
-     * @return int
+     * @return int A variable of type int.
      */
     public int getpSafeUserCount()
     {
@@ -75,7 +75,7 @@ public class UserManagementSystem {
 
     /**
      * Returns the number of student users in the database
-     * @return int
+     * @return int A variable of type int.
      */
     public int getStudentUserCount()
     {
