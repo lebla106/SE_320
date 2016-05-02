@@ -16,7 +16,6 @@ public class EmailNotificationTest extends TestCase {
     /**
      * Assigning the values
      */
-
     protected void setUp()
     {
         testUserEmail = "kmlamkin@gmail.com";
@@ -27,7 +26,6 @@ public class EmailNotificationTest extends TestCase {
     /**
      * test method to add notifications
      */
-
     public void testAddNotification()
     {
         emailSender.addNotification(testMessage);
