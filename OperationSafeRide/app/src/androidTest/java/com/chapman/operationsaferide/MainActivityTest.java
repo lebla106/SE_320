@@ -9,12 +9,13 @@ import junit.framework.TestCase;
  */
 public class MainActivityTest extends TestCase {
 
+    MainActivity maTest;
     /* (non-Javadoc)
      * @see junit.framework.TestCase#setUp()
      */
     protected void setUp() throws Exception {
         super.setUp();
-        MainActivity maTest = new MainActivity();
+        maTest = new MainActivity();
     }
 
     /* (non-Javadoc)
@@ -25,17 +26,17 @@ public class MainActivityTest extends TestCase {
     }
 
     /**
-     * Test method for {@link java.com.chapman.operationsaferide.MainActivity#makeRequest()}.
+     * Test method for {@link MainActivity#makeRequest()}.
      */
     public void testMakeRequest() {
-       assertTrue(ma.makeRequest());
+       assertTrue(maTest.makeRequest());
     }
 
     /**
-     * Test method for {@link java.com.chapman.operationsaferide.MainActivity#cancelRequest()}.
+     * Test method for {@link MainActivity#cancelRequest()}.
      */
     public void testCancelRequest() {
-        assertTrue(ma.cancelRequest());
+        assertTrue(maTest.cancelRequest());
     }
 
 }
