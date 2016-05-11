@@ -20,7 +20,7 @@ public class LocationService {
      * Handles context on creation of class.
      * @param context A variable of type {@link android.content.Context}.
      */
-    protected void onCreate(Context context){
+    public LocationService(Context context){
         this.context = context;
         lm = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);
         gpsListener = new LocationListener() {
@@ -61,9 +61,9 @@ public class LocationService {
         };
         try {
 
-            //lm.requestLocationUpdates(lm.GPS_PROVIDER, 0, 0, gpsListener);
+            lm.requestLocationUpdates(lm.GPS_PROVIDER, 0, 0, gpsListener);
         }catch(SecurityException e) {
-           System.out.println("Error: Location Permission Unavailable");
+            System.out.println("Error: Location Permission Unavailable");
         }
     }
 
@@ -73,12 +73,23 @@ public class LocationService {
      */
     public Location getLocation(){
         try {
-            //here = lm.getLastKnownLocation(lm.GPS_PROVIDER);
+            here = lm.getLastKnownLocation(lm.GPS_PROVIDER);
         }catch(SecurityException e) {
             System.out.println("Error: Can't obtain Location");
+        }catch(NullPointerException e)
+        {
+            System.out.println(e.getMessage());
         }
 
         return here;
+    }
+
+
+    public double getLatitude(){
+        return this.getLocation().getLatitude();
+    }
+    public double getLongitude(){
+        return this.getLocation().getLongitude();
     }
 
 }

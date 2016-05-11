@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Context;
 
 import org.w3c.dom.Text;
 
@@ -17,11 +18,14 @@ import org.w3c.dom.Text;
  *
  * Created by Melissa LeBlanc on 5/1/16
  * Class that handles main activity of app.
- * @author Melissa LeBlanc
+ * @author Katie Lamkin
  * @version 1.0
  * @see {@link AppCompatActivity}.
  */
 public class MainActivity extends AppCompatActivity {
+
+    TextView coordinateView;
+    LocationService ls;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+
+        Context context = this.getApplicationContext();
+        ls = new LocationService(context);
+        //coordinateView = (TextView)findViewById(R.id.txt_coor);
     }
 
     /**
@@ -138,6 +146,15 @@ public class MainActivity extends AppCompatActivity {
         EmailNotification request = new EmailNotification("operationsaferidechap@gmail.com");
         request.addNotification(message);
         request.sendNotification("Operation Safe Ride CANCELATION");
+        return true;
+    }
+
+    public boolean getLocation()
+    {
+        double latitude = ls.getLatitude();
+        double longitude = ls.getLongitude();
+        coordinateView.setText(String.valueOf(latitude) + ", " + String.valueOf(longitude));
+        //TODO: get call to interact with user class and have user class call location services or whatever
         return true;
     }
 }
